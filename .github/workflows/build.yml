@@ -52,4 +52,23 @@ jobs:
         with:
           name: package
           path: bin/*.apk
-          
+          - name: Install Dependencies
+  run: |
+    sudo apt-get update
+    sudo apt-get install -y \
+      build-essential \
+      git \
+      python3 \
+      python3-dev \
+      python3-pip \
+      libffi-dev \
+      libssl-dev \
+      zlib1g-dev \
+      libncurses5 \
+      libncursesw5 \
+      libtinfo5 \
+      autoconf \
+      libtool \
+      unzip \
+      zip
+      
